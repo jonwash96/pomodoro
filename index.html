@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pomodoro</title>
+	<style>
+		:root { 
+			color-scheme: light dark; 
+			--bg: light-dark(#888, #333);
+			--bgf1: light-dark(#777, #444);
+			--bgf2: light-dark(#666, #555);
+			--bgf2: light-dark(#688, #777);
+			--bgb1: light-dark(#eef, #001);
+		}
+		.show { display:block !important; }
+		.show-i { display:inline !important; }
+		.show-iblock { display:inline-block !important; }
+		.show-flex { display:flex !important; }
+		.show-grid { display:grid !important; }
+		.hide { display:none !important; }
+		
+		.error { color:rgb(255, 45, 45); }
+
+		body { margin: 0 auto; }
+		h1 { font-family: sans-serif; text-align: center; }
+
+		#fullscreen-wrapper { 
+			float:right; 
+			& #fullscreen { display: none; }
+			& label::after { content:"☐"; }
+			& input:checked + label::after { content:"■" }
+		}
+
+		main {
+			font-family: monospace;
+			min-width: 320px;
+			max-width: 520px;
+			border: 1px solid #aaa1;
+			border-radius: 12px;
+			background-color: var(--bg);
+			margin: 0 auto;
+			padding: 2em;
+
+			&> section { width: 100%; }
+		}
+
+		section#modes {
+			display: flex;
+			gap: .5em;
+
+			&> div {
+				padding: 6px;
+				border: 1px solid grey;
+				border-bottom: none;
+				border-radius: 6px 6px 0 0;
+
+				&:hover { cursor:pointer; }
+			}
+			&> div.active {
+				color: light-dark(#0a3, #5f8);
+				background-color: var(--bgf1);
+			}
+
+		}
+
+		section#timer {
+			background-color: var(--bgf1);
+			border: 1px solid grey;
+			border-radius: 0 6px 6px 6px;
+			padding: 4em auto;
+			display: flex;
+			justify-content: center;
+
+			&> input {
+				padding: clamp(3px, auto, 12px);
+				margin: 3px;
+				border: none;
+				border-radius: 6px;
+				font-size: clamp(24pt, 5em, 52pt);
+				text-align: center;
+				font-family: monospace;
+				background-color: var(--bgb1);
+			}
+			&>span { font-size: 52pt; }
+		}
+
+		section#controls {
+			display: flex;
+			justify-content: center;
+			gap: 2em;
+
+			&> button {
+				width: 45%;
+				padding: 12px;
+				border: 1px solid grey;
+				border-radius: 12px;
+				background-color: var(--bgf2);
+				box-shadow: 6px 6px 0 var(--bgf1);
+
+				&:active { box-shadow: none; }
+				&:hover { cursor: pointer; background-color: var(--bgf3); }
+				&[mode=Start],
+				&[mode=Resume] { 
+					background-color: #0a3; 
+					&:hover { cursor: pointer; background-color: #5f8; }
+				}
+				&[mode=Pause] { 
+					background-color: #a03; 
+					box-shadow: none;
+					&:hover { cursor: pointer; background-color: #f58; }
+				}
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Pomodoro</h1>
+
+	<main>
+		<div id="fullscreen-wrapper" title="Toggle Fullscreen">
+			<input id="fullscreen" type="checkbox"/>
+			<label for="fullscreen"/>
+		</div>
+
+		<section id="modes">
+			<div id="focus" class="active">Focus</div>
+			<div id="short">Short Break</div>
+			<div id="long">Long Break</div>
+			<div id="config">Settings</div>
+		</section>
+
+		<section id="timer">
+			<input type="number" id="min-ten" class="num-set" value="2" min="0" max="5" multiplier="600000"/>
+			<input type="number" id="min-one" class="num-set" value="5" min="0" max="9" multiplier="60000"/>
+			<span id="colon">:</span>
+			<input type="number" id="sec-ten" class="num-set" value="0" min="0" max="5" multiplier="10000"/>
+			<input type="number" id="sec-one" class="num-set" value="0" min="0" max="9" multiplier="1000"/>
+		</section>
+
+		<section id="settings" class="hide">
+			<div id="sounds">
+				<h3>Alarm Sounds</h3>
+				<figure class="silent">
+					<figcaption>
+						<input id="silent" type="radio" name="sounds" data-url="null" checked/>
+						<label for="silent">Silent</label>
+					</figcaption>
+				</figure>
+				<figure class="custom">
+					<figcaption>
+						<input id="custom" type="radio" name="sounds" data-url="null" checked/>
+						<label for="custom">Custom</label>
+					</figcaption>
+					<div class="container hide">
+						<audio controls class="hide"></audio><br>
+						<label for="custom-url">URL: </label>
+						<input id="custom-url" type="text"/>
+						<button id="add-custom" onclick="customAudio.set()">Add</button>
+						<span class="error"></span>
+					</div>
+				</figure>
+				<figure class="alarm-clock-1">
+					<figcaption>
+						<input id="alarm-clock-1" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Alarm%20Clock-SoundBible.com-437257341.mp3"/>
+						<label for="alarm-clock-1">Alarm Clock 1</label>
+					</figcaption>
+					<audio controls src="https://soundbible.com/mp3/Alarm%20Clock-SoundBible.com-437257341.mp3"></audio>
+				</figure>
+				<figure class="pager">
+					<figcaption>
+						<input id="pager" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Pager%20Beeps-SoundBible.com-260751720.mp3"/>
+						<label for="pager">Pager</label>
+					</figcaption>
+					<audio controls src="https://soundbible.com/mp3/Pager%20Beeps-SoundBible.com-260751720.mp3"></audio>
+				</figure>
+				<figure class="cuckoo">
+					<figcaption>
+						<input id="cuckoo" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Cuckoo%20Clock-SoundBible.com-1776874523.mp3"/>
+						<label for="alarm-clock-1">Cuckoo</label>
+					</figcaption>
+					<audio controls src="https://soundbible.com/mp3/Cuckoo%20Clock-SoundBible.com-1776874523.mp3"></audio>
+				</figure>
+				<figure class="4-chime">
+					<figcaption>
+						<input id="4-chime" type="radio" name="sounds" data-url="https://soundbible.com/mp3/clock-chimes-daniel_simon.mp3"/>
+						<label for="4-chime">Chime 4X</label>
+					</figcaption>
+					<audio controls src="https://soundbible.com/mp3/clock-chimes-daniel_simon.mp3"></audio>
+				</figure>
+				<figure class="zen-bell">
+					<figcaption>
+						<input id="zen-bell" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Temple%20Bell-SoundBible.com-756181215.mp3"/>
+						<label for="zen-bell">Zen Bell</label>
+					</figcaption>
+					<audio controls src="https://soundbible.com/mp3/Temple%20Bell-SoundBible.com-756181215.mp3"></audio>
+				</figure>
+				<figure class="airplane-ding">
+					<figcaption>
+						<input id="airplane-ding" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Air%20Plane%20Ding-SoundBible.com-496729130.mp3"/>
+						<label for="airplane-ding">Ariplane Ding</label>
+					</figcaption>
+					<audio controls src="https://soundbible.com/mp3/Air%20Plane%20Ding-SoundBible.com-496729130.mp3"></audio>
+				</figure>
+				<figure class="air-horn">
+					<figcaption>
+						<input id="air-horn" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Airhorn-SoundBible.com-975027544.mp3"/>
+						<label for="air-horn">Air Horn</label>
+					</figcaption>
+					<audio controls src="https://soundbible.com/mp3/Airhorn-SoundBible.com-975027544.mp3"></audio>
+				</figure>
+			</div>
+		</section>
+
+		<p id="title-ticker-wrapper" title="Title Ticker">
+			<input id="title-ticker" type="checkbox"/>
+			<label for="title-ticker">Show time in tab title</label>
+		</p>
+
+		<section id="controls">
+			<button id="start-pause" mode="Start">Start</button>
+			<button id="reset">Reset</button>
+		</section>
+	</main>
+
+	<script type="text/javascript">
+		Number.prototype._clamp = clamp;
+		/**
+		 * Clamp a numberto a value or within a range
+		 * @param { number } val Max if 1 arg, min if 2
+		 * @param { number } max Max if 2 args present
+		 */
+		function clamp(val, max) {
+			switch (arguments.length) {
+				case 0: {console.warn("@_clamp() Error. At least 1 argument must be passed");
+				return this};
+				case 1: return this > val ? val : this;
+				case 2: 
+				default: return this < val ? val : this > max ? max : this;
+			}
+		}
+		Number.prototype._wrap = wrap;
+		function wrap(val, max) {
+			switch (arguments.length) {
+				case 0: {console.warn("@wrap() Error. At least 1 argument must be passed");
+						return this};
+				case 1: return this > val ? this - val : this;
+				case 2: 
+				default: return this < val ? max - (val - this) : this > max ? this - val : this;
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		const titleTicker = document.getElementById('title-ticker')
+		var settings = {
+			panel: document.getElementById('settings'),
+			button: document.getElementById('config'),
+			sounds: {
+				target: document.getElementById('sounds'),
+				children: Array.from(document.getElementById('sounds').children),
+				inputs: Array.from(document.querySelectorAll('section#settings > div#sounds input')),
+				selected: document.getElementById('zen-bell'),
+				select: function(node) {this.selected = node}
+			},
+			show: function() {
+				settings.panel.classList.remove('hide');
+				timer.target.classList.add('hide');
+			},
+			hide: function(restore) {
+				restore && mode.select(mode.prev);
+				settings.panel.classList.add('hide');
+				timer.target.classList.remove('hide');
+			}
+		}
+		var mode = {
+			target: document.getElementById('modes'),
+			children: {
+				focus: document.getElementById('focus'),
+				short: document.getElementById('short'),
+				long: document.getElementById('long'),
+				config: settings.button,
+			},
+			prev: undefined,
+			selected: 'focus',
+			breakCount: 0,
+			select: function(mode) {
+				if (timer.timer.target) return;
+				this.prev = this.selected;
+				for (m in this.children) {this.children[m].classList.remove('active')};
+				this.children[mode].classList.add('active'); 
+				this.selected = mode;
+				if (mode === 'config') return settings.show()
+				else settings.hide();
+				!timer.timer.target && timer.set(mode);
+			},
+			cycle: function() {this.selected === 'focus' 
+				? ++this.breakCount > 2 ? this.select('long') : this.select('short')
+				: this.select('focus'); 
+			},
+			reset: function() {
+				this.breakCount = 0;
+				this.select('focus');
+			}
+		}
+		var buttons = {
+			mode: {
+				target: document.getElementById('start-pause'),
+				prev: 'start',
+				set: function(mode) {
+					this.target.textContent = mode; this.target.setAttribute('mode', mode);
+					this.target.removeEventListener('click', timer[this.prev]);
+					this.target.addEventListener('click', timer[mode.toLowerCase()]);
+					this.prev = mode.toLowerCase();
+				},
+			},
+			reset: {
+				target: document.getElementById('reset'),
+				call: ()=> {timer.reset(); mode.reset()},
+			},
+		}
+		var timer = {
+			target: document.getElementById('timer'),
+			nums: Array.from(document.querySelectorAll('.num-set')),
+			currentTime: 0,
+			timer: {
+				target: undefined,
+				start: function() {this.target = setTimeout(()=> timer.alert(), timer.currentTime);},
+				clear: function() {clearTimeout(this.target); this.target = undefined}
+			},
+			ticker: {
+				target: undefined,
+				tick: function() {
+					this.target = setInterval(()=> {
+						timer.currentTime -= 1000;
+						timer.updateNums();
+						if (titleTicker.checked) document.title = `${timer.nums[0].value}${timer.nums[1].value}:${timer.nums[2].value}${timer.nums[3].value} Pomodoro`
+					}, 1000);
+				},
+				clear: function() {clearInterval(this.target)},
+			},
+			updateNums: function() {this.nums.forEach(el => el.value = Math.floor(this.currentTime / el.getAttribute('multiplier')) % (el.id.includes('ten') ? 6 : 10))},
+			set: function(mode) {
+				switch (mode) {
+					case 'focus': this.currentTime = 25 * 1000 * 60; break;
+					case 'long': this.currentTime = 15 * 1000 * 60; break;
+					case 'short': this.currentTime = 5 * 1000 * 60; break;
+					default: typeof mode === 'number' ? this.currentTime = mode : this.currentTime = 25 * 1000 * 60;
+				}
+				this.updateNums()
+			},
+			alert: function() {
+				setTimeout(()=> {this.reset(); mode.cycle(); this.nums.forEach(el => el.readOnly = false)}, 1000);
+				clearInterval(this.ticker.target);
+				notification.notify({body: mode.next === 'focus' ? "Time to focus." : "Time for a break."})
+			},
+			start: function() {
+				mode.selected === 'config' && settings.hide(true);
+				const timeMS = this.nums.reduce((a,b) => a += Number(b.value) * Number(b.getAttribute('multiplier')), 0);
+				this.currentTime = timeMS;
+				this.nums.forEach(el => el.readOnly = true);
+				buttons.mode.set('Pause');
+				this.timer.start();
+				this.ticker.tick();
+			},
+			pause: function() {
+				mode.selected === 'config' && settings.hide(true);
+				buttons.mode.set('Resume');
+				this.timer.clear();
+				this.ticker.clear();
+			},
+			resume: function() {
+				mode.selected === 'config' && settings.hide(true);
+				buttons.mode.set('Pause');
+				this.timer.start();
+				this.ticker.tick();
+			},
+			reset: function() {
+				buttons.mode.set('Start')
+				buttons.mode.prev = 'start';
+				this.timer.clear()
+				this.ticker.clear()
+				this.set('focus');
+				document.title = "Pomodoro";
+				settings.hide();
+			}
+		}
+		var notification = {
+			target: undefined,
+			audio: undefined,
+			notify: function(options) {
+				if (Notification.permission !== 'granted') return alert(`Time's Up! ${options?.body}`)
+				this.target = new Notification(options?.title || "Time's up", {
+					vibrate: [100, 50, 100, 50, 200],
+					...options
+				});
+				this.target.addEventListener('click', ()=> {
+					this.audio?.pause();
+					this.target.close(); 
+					this.target = undefined
+				})
+				const url = settings.sounds.selected.dataset.url
+				this.audio = url && new Audio(url)
+				this.audio.play();
+			},
+		}
+
+		timer.start = timer.start.bind(timer);
+		timer.pause = timer.pause.bind(timer);
+		timer.resume = timer.resume.bind(timer);
+		buttons.reset.call = buttons.reset.call.bind(buttons.reset);
+		buttons.mode.target.addEventListener('click', timer.start);
+		buttons.reset.target.addEventListener('click', buttons.reset.call);
+		timer.nums.forEach((input,idx) => {
+			const handleKeyDown = (e) => {
+				if (e.key === 'Enter') {input.blur(); timer.start()}
+				else if (/\d/.test(e.key)) {
+					e.preventDefault();
+					input.value = e.key;
+					const nextInput = timer.nums[(idx+1)._clamp(timer.nums.length-1)];
+					nextInput.focus();
+					nextInput.select();
+				}
+			}
+			input.addEventListener('focus', ()=> {
+				input.select();
+				input.addEventListener('keydown', handleKeyDown)
+			})
+			input.addEventListener('blur', ()=> {
+				input.removeEventListener('keydown', handleKeyDown)
+			})
+		});
+
+		mode.select = mode.select.bind(mode);
+		Array.from(mode.target.children).forEach(el => el.addEventListener('click', (e)=> mode.select(e.target.id)));
+
+		settings.sounds.select = settings.sounds.select.bind(settings.sounds);
+		settings.sounds.inputs.forEach(input => input.addEventListener('change', (e)=> settings.sounds.select(e.target)));
+		settings.sounds.selected.checked = true;
+
+		const customAudio = {
+			target: document.querySelector('figure.custom'),
+			radio: document.querySelector('figure.custom input[type=radio]'),
+			container: document.querySelector('figure.custom > div.container'),
+			error: document.querySelector('figure.custom > div.container span.error'),
+			input: document.querySelector('figure.custom > div.container input[type=text]'),
+			audio: document.querySelector('figure.custom > div.container audio'),
+			node: undefined,
+			show: function() {this.container.classList.remove('hide')},
+			hide: function() {if (this.audio.src != '') this.container.classList.add('hide')},
+			set: function() {
+				fetch(this.input.value, {method:"HEAD"})
+				.then(res => {
+					if (!res.status == 200) throw new Error("Custom URL Invalid");
+					customAudio.radio.dataset.url = customAudio.input.value;
+					customAudio.audio.src = customAudio.input.value;
+					customAudio.audio.classList.remove('hide');
+					customAudio.error.textContent = '';
+					})
+				.catch(err => {console.warn(err); customAudio.error.textContent = err.message})
+			}
+		}
+		customAudio.radio.addEventListener('change', (e)=> {
+			e.target.checked ? customAudio.show() : customAudio.hide();
+		})
+
+		titleTicker.addEventListener('change', (e)=> !e.checked && (document.title = "Pomodoro"));
+
+		const fullscreen = document.getElementById('fullscreen');
+		const body = document.querySelector('body');
+		fullscreen.addEventListener('change', (e)=> document.fullscreen ? document.exitFullscreen() : body.requestFullscreen());
+
+		window['Notification'] && Notification.requestPermission();
+	</script>
+</body>
+</html>

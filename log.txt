@@ -1,0 +1,1560 @@
+
+localIP acquired: 192.168.4.10
+Pomodoro Server Listening on Port undefined @ 2026-05-15T09:36:59.465Z from /Users/JON/Programming/tools/pomodoro
+localIP acquired: 192.168.4.10
+Pomodoro Server Listening on Port 28000 @ 2026-05-15T09:58:29.023Z from /Users/JON/Programming/tools/pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T09:58:50.497Z | GET:/
+localIP acquired: 192.168.4.10
+Pomodoro Server Listening on Port 28000 @ 2026-05-15T09:59:14.363Z from /Users/JON/Programming/tools/pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T09:59:18.950Z | GET:/
+date: 2026-05-15T09:59:18.952Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+localIP acquired: 192.168.4.10
+Pomodoro Server Listening on Port 28000 @ 2026-05-15T09:59:27.456Z from /Users/JON/Programming/tools/pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T09:59:29.698Z | GET:/
+localIP acquired: 192.168.4.10
+Pomodoro Server Listening on Port 28000 @ 2026-05-15T10:00:00.153Z from /Users/JON/Programming/tools/pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:00:04.809Z | GET:/
+date: 2026-05-15T10:00:04.810Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+localIP acquired: 192.168.4.10
+Pomodoro Server Listening on Port 28000 @ 2026-05-15T10:00:15.787Z from /Users/JON/Programming/tools/pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:00:17.695Z | GET:/
+date: 2026-05-15T10:00:17.696Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:00:17.745Z | GET:/favicon.ico
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:01:52.432Z | GET:/
+date: 2026-05-15T10:01:52.432Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:02:41.903Z | GET:/
+date: 2026-05-15T10:02:41.903Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:03:19.099Z | GET:/
+date: 2026-05-15T10:03:19.099Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:03:44.222Z | GET:/
+date: 2026-05-15T10:03:44.223Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:04:23.913Z | GET:/
+date: 2026-05-15T10:04:23.913Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:05:18.947Z | GET:/
+date: 2026-05-15T10:05:18.947Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:07:59.955Z | GET:/
+date: 2026-05-15T10:07:59.956Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:09:20.663Z | GET:/
+date: 2026-05-15T10:09:20.663Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:10:08.958Z | GET:/
+date: 2026-05-15T10:10:08.958Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:10:23.270Z | GET:/
+date: 2026-05-15T10:10:23.270Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:10:47.550Z | GET:/
+date: 2026-05-15T10:10:47.551Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:13:06.832Z | GET:/
+date: 2026-05-15T10:13:06.832Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+date: 2026-05-15T10:13:23.589Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:13:23.588Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:13:32.092Z | GET:/
+date: 2026-05-15T10:13:32.092Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+date: 2026-05-15T10:13:35.938Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:13:35.938Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:13:49.621Z | GET:/
+date: 2026-05-15T10:13:49.621Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+date: 2026-05-15T10:18:30.761Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:18:30.761Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:18:51.103Z | GET:/
+date: 2026-05-15T10:18:51.103Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:19:00.208Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T10:22:02.451Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:22:02.451Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:22:02.464Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:23:27.324Z | GET:/
+date: 2026-05-15T10:23:27.325Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:23:27.343Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:26:11.105Z | GET:/
+date: 2026-05-15T10:26:11.105Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:26:11.166Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:28:42.902Z | GET:/
+date: 2026-05-15T10:28:42.902Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:28:42.918Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T10:29:40.520Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:29:40.519Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:29:40.534Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:32:28.110Z | GET:/
+date: 2026-05-15T10:32:28.110Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:32:28.125Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:33:37.183Z | GET:/
+date: 2026-05-15T10:33:37.183Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:33:37.203Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:39:06.740Z | GET:/
+date: 2026-05-15T10:39:06.741Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:39:06.759Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:44:02.458Z | GET:/
+date: 2026-05-15T10:44:02.459Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:44:02.496Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:48:07.520Z | GET:/
+date: 2026-05-15T10:48:07.520Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:48:07.533Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:48:21.863Z | GET:/
+date: 2026-05-15T10:48:21.863Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:48:21.878Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T10:49:09.357Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:49:09.356Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:49:09.370Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:50:35.045Z | GET:/
+date: 2026-05-15T10:50:35.045Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:50:35.058Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T10:51:07.652Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:51:07.652Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:51:07.669Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:52:26.880Z | GET:/
+date: 2026-05-15T10:52:26.881Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:52:26.896Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T10:52:55.176Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:52:55.176Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:52:55.194Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:59:32.256Z | GET:/
+date: 2026-05-15T10:59:32.256Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T10:59:32.273Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T11:03:35.169Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:03:35.169Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:03:35.184Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T11:06:03.501Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:06:03.500Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:06:03.520Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:07:00.875Z | GET:/
+date: 2026-05-15T11:07:00.875Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:07:00.890Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:08:27.202Z | GET:/
+date: 2026-05-15T11:08:27.203Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:08:27.219Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:10:11.611Z | GET:/
+date: 2026-05-15T11:10:11.611Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:10:11.626Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:12:50.330Z | GET:/
+date: 2026-05-15T11:12:50.331Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:12:50.378Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:17:09.180Z | GET:/
+date: 2026-05-15T11:17:09.180Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:17:09.196Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:17:42.713Z | GET:/
+date: 2026-05-15T11:17:42.714Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:17:42.729Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:18:38.150Z | GET:/
+date: 2026-05-15T11:18:38.150Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:18:38.166Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:22:51.808Z | GET:/
+date: 2026-05-15T11:22:51.808Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:22:51.826Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:23:26.091Z | GET:/
+date: 2026-05-15T11:23:26.092Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:23:26.109Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T11:38:02.465Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:38:02.464Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:38:02.479Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:38:41.410Z | GET:/
+date: 2026-05-15T11:38:41.410Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:38:41.426Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:48:23.159Z | GET:/
+date: 2026-05-15T11:48:23.160Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:48:23.176Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:52:12.535Z | GET:/
+date: 2026-05-15T11:52:12.535Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:52:12.550Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:53:23.140Z | GET:/
+date: 2026-05-15T11:53:23.140Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:53:23.155Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T11:56:19.357Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:56:19.356Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T11:56:19.373Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:01:52.321Z | GET:/
+date: 2026-05-15T12:01:52.321Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:01:52.347Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T12:02:26.724Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:02:26.724Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:02:26.740Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:04:11.802Z | GET:/
+date: 2026-05-15T12:04:11.802Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:04:11.815Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:04:20.885Z | GET:/
+date: 2026-05-15T12:04:20.885Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:04:20.905Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T12:04:52.607Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:04:52.607Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:04:52.623Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:07:38.301Z | GET:/
+date: 2026-05-15T12:07:38.302Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:07:38.315Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:08:34.625Z | GET:/
+date: 2026-05-15T12:08:34.625Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:08:34.643Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:14:33.513Z | GET:/
+date: 2026-05-15T12:14:33.513Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:14:33.535Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T12:15:30.232Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:15:30.232Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:15:30.245Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:17:37.871Z | GET:/
+date: 2026-05-15T12:17:37.871Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:17:37.885Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T12:21:36.797Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:21:36.796Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:21:36.846Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:22:54.492Z | GET:/
+date: 2026-05-15T12:22:54.492Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:22:54.513Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T12:23:12.756Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:23:12.756Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:23:12.778Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T12:23:49.534Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:23:49.534Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:23:49.546Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:25:38.903Z | GET:/
+date: 2026-05-15T12:25:38.903Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:25:38.915Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:25:52.737Z | GET:/
+date: 2026-05-15T12:25:52.737Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:25:52.757Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T12:28:48.073Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:28:48.073Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:28:48.087Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:29:17.848Z | GET:/
+date: 2026-05-15T12:29:17.848Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:29:17.866Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T12:31:14.692Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:31:14.692Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:31:14.705Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:31:43.093Z | GET:/
+date: 2026-05-15T12:31:43.094Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:31:43.109Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T12:33:50.278Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:33:50.278Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:33:50.295Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:37:14.921Z | GET:/
+date: 2026-05-15T12:37:14.922Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T12:37:14.934Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T17:59:32.710Z | GET:/
+date: 2026-05-15T17:59:32.713Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T17:59:32.721Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T17:59:44.806Z | GET:/
+date: 2026-05-15T17:59:44.806Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T17:59:44.835Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:00:22.100Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:00:22.099Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:00:22.118Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:00:38.711Z | GET:/
+date: 2026-05-15T18:00:38.711Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:00:38.735Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:04:15.037Z | GET:/
+date: 2026-05-15T18:04:15.038Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:04:15.185Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:04:35.189Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:04:35.189Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:04:35.218Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:04:58.525Z | GET:/
+date: 2026-05-15T18:04:58.525Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:04:58.545Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:06:51.930Z | GET:/
+date: 2026-05-15T18:06:51.930Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:06:51.945Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:07:20.953Z | GET:/
+date: 2026-05-15T18:07:20.954Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:07:20.977Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:07:59.821Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:07:59.821Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:07:59.837Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:09:02.825Z | GET:/
+date: 2026-05-15T18:09:02.826Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:09:02.843Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:14:13.301Z | GET:/
+date: 2026-05-15T18:14:13.302Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:14:13.327Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:17:05.343Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:17:05.343Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:17:05.358Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:30:53.838Z | GET:/
+date: 2026-05-15T18:30:53.841Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:30:53.870Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:36:59.667Z | GET:/
+date: 2026-05-15T18:36:59.668Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:36:59.687Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:37:41.804Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:37:41.803Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:37:41.836Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:38:37.561Z | GET:/
+date: 2026-05-15T18:38:37.561Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:38:37.588Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:39:11.975Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:39:11.975Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:39:12.004Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:40:04.908Z | GET:/
+date: 2026-05-15T18:40:04.909Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:40:04.924Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:44:31.182Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:44:31.182Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:44:31.201Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:44:47.245Z | GET:/
+date: 2026-05-15T18:44:47.246Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:44:47.264Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:45:06.049Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:45:06.049Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:45:06.067Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:47:52.117Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:47:52.116Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:47:52.146Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T18:49:28.585Z | GET:/
+date: 2026-05-15T18:49:28.586Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T18:49:28.759Z | GET:/favicon.ico
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T18:52:42.681Z | GET:/
+date: 2026-05-15T18:52:42.682Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T18:52:53.211Z | GET:/
+date: 2026-05-15T18:52:53.212Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T18:54:07.479Z | GET:/
+date: 2026-05-15T18:54:07.480Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T18:54:16.110Z | GET:/
+date: 2026-05-15T18:54:16.110Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:54:38.855Z | GET:/
+date: 2026-05-15T18:54:38.856Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:54:38.876Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:55:41.010Z | GET:/
+date: 2026-05-15T18:55:41.010Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:55:41.033Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:56:23.988Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:56:23.988Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:56:24.007Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T18:57:00.059Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:57:00.058Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:57:00.073Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:57:09.465Z | GET:/
+date: 2026-05-15T18:57:09.465Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T18:57:09.483Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T18:57:15.378Z | GET:/
+date: 2026-05-15T18:57:15.378Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T18:57:52.834Z | GET:/
+date: 2026-05-15T18:57:52.835Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:02:01.094Z | GET:/
+date: 2026-05-15T19:02:01.094Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:02:56.348Z | GET:/
+date: 2026-05-15T19:02:56.349Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:08:12.975Z | GET:/
+date: 2026-05-15T19:08:12.975Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+date: 2026-05-15T19:11:21.287Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:11:21.282Z | GET:/
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:12:12.173Z | GET:/
+date: 2026-05-15T19:12:12.173Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+date: 2026-05-15T19:13:07.946Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:13:07.945Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:13:07.972Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:14:10.183Z | GET:/
+date: 2026-05-15T19:14:10.183Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:14:10.200Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T19:14:49.970Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:14:49.970Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:14:49.983Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:16:19.402Z | GET:/
+date: 2026-05-15T19:16:19.402Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:16:19.421Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:17:28.328Z | GET:/
+date: 2026-05-15T19:17:28.329Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:17:28.351Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T19:18:20.322Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:18:20.322Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:18:20.339Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:18:37.566Z | GET:/
+date: 2026-05-15T19:18:37.567Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+date: 2026-05-15T19:19:25.950Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:19:25.949Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:20:37.774Z | GET:/
+date: 2026-05-15T19:20:37.774Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:20:37.791Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:20:44.656Z | GET:/
+date: 2026-05-15T19:20:44.657Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+date: 2026-05-15T19:21:06.278Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:21:06.278Z | GET:/
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:22:29.857Z | GET:/
+date: 2026-05-15T19:22:29.857Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:22:34.360Z | GET:/
+date: 2026-05-15T19:22:34.360Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+date: 2026-05-15T19:22:58.016Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:22:58.015Z | GET:/
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:23:12.169Z | GET:/
+date: 2026-05-15T19:23:12.169Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:23:41.121Z | GET:/
+date: 2026-05-15T19:23:41.121Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:24:16.998Z | GET:/
+date: 2026-05-15T19:24:16.998Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:24:23.121Z | GET:/
+date: 2026-05-15T19:24:23.121Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:24:29.867Z | GET:/
+date: 2026-05-15T19:24:29.867Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:24:39.160Z | GET:/
+date: 2026-05-15T19:24:39.160Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:24:41.754Z | GET:/
+date: 2026-05-15T19:24:41.755Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:24:41.776Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:25:41.320Z | GET:/
+date: 2026-05-15T19:25:41.320Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:25:41.338Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T19:25:43.529Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:25:43.528Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:26:11.651Z | GET:/
+date: 2026-05-15T19:26:11.651Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:26:11.666Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:26:14.326Z | GET:/
+date: 2026-05-15T19:26:14.327Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:27:18.125Z | GET:/
+date: 2026-05-15T19:27:18.125Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:27:18.141Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:27:47.522Z | GET:/
+date: 2026-05-15T19:27:47.522Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:27:47.540Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T19:28:29.163Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:909e:4ace:d37a:aa7b
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T19:28:29.163Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:28:45.274Z | GET:/
+date: 2026-05-15T19:28:45.275Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T19:28:45.291Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T20:28:12.555Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:28:12.554Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:28:12.598Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T20:28:33.443Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:28:33.443Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:28:33.467Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T20:29:30.607Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:29:30.606Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:29:30.633Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:30:54.711Z | GET:/
+date: 2026-05-15T20:30:54.711Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:30:54.735Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:31:06.271Z | GET:/
+date: 2026-05-15T20:31:06.272Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:31:06.298Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T20:33:10.382Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:33:10.382Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:33:10.413Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:34:18.110Z | GET:/
+date: 2026-05-15T20:34:18.110Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:34:18.127Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T20:34:35.204Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:34:35.204Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:34:35.225Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:34:53.941Z | GET:/
+date: 2026-05-15T20:34:53.943Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:34:53.964Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:35:09.676Z | GET:/
+date: 2026-05-15T20:35:09.676Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:35:09.695Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T20:36:15.340Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:36:15.340Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:36:15.367Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:38:16.947Z | GET:/
+date: 2026-05-15T20:38:16.947Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:38:16.964Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:40:17.491Z | GET:/
+date: 2026-05-15T20:40:17.491Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:40:17.510Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T20:40:37.131Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:40:37.131Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:40:37.149Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:40:59.924Z | GET:/
+date: 2026-05-15T20:40:59.924Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:40:59.943Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:43:00.150Z | GET:/
+date: 2026-05-15T20:43:00.150Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:43:00.166Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T20:47:36.949Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:47:36.948Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:47:36.974Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:49:28.622Z | GET:/
+date: 2026-05-15T20:49:28.622Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:49:28.644Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:51:37.208Z | GET:/
+date: 2026-05-15T20:51:37.208Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:51:37.234Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T20:52:29.884Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:52:29.884Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:52:29.913Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:53:46.107Z | GET:/
+date: 2026-05-15T20:53:46.108Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:53:46.130Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:58:26.760Z | GET:/
+date: 2026-05-15T20:58:26.760Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T20:58:26.782Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T21:00:35.460Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:00:35.439Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:00:35.509Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T21:01:27.556Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:01:27.555Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:01:27.573Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T21:06:45.938Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:959:1d7f:6947:d39c
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T21:06:45.938Z | GET:/
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T21:07:31.539Z | GET:/
+date: 2026-05-15T21:07:31.539Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:959:1d7f:6947:d39c
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T21:09:29.400Z | GET:/
+date: 2026-05-15T21:09:29.401Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:959:1d7f:6947:d39c
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+date: 2026-05-15T21:10:01.646Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:10:01.645Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:10:01.666Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:10:07.182Z | GET:/
+date: 2026-05-15T21:10:07.182Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:10:07.199Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T21:16:32.852Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:16:32.851Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:16:32.869Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:19:13.517Z | GET:/
+date: 2026-05-15T21:19:13.517Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:19:13.533Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T21:43:10.380Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:959:1d7f:6947:d39c
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T21:43:10.379Z | GET:/
+date: 2026-05-15T21:45:00.240Z
+      host: stardestroyer-1701.local:28000
+      ip: 2600:1702:d90:2dbf:959:1d7f:6947:d39c
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: stardestroyer-1701.local:28000 | date: 2026-05-15T21:45:00.240Z | GET:/
+date: 2026-05-15T21:56:09.217Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:56:09.216Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:56:09.351Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:56:36.533Z | GET:/
+date: 2026-05-15T21:56:36.535Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:56:36.569Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:57:52.870Z | GET:/
+date: 2026-05-15T21:57:52.871Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:57:52.886Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:58:58.406Z | GET:/
+date: 2026-05-15T21:58:58.406Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T21:58:58.423Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T22:04:02.694Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T22:04:02.693Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T22:04:02.718Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T22:11:39.615Z | GET:/
+date: 2026-05-15T22:11:39.616Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T22:11:39.641Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T22:14:56.847Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T22:14:56.845Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T22:14:56.876Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T22:57:55.306Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T22:57:55.303Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T22:57:55.454Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:02:57.995Z | GET:/
+date: 2026-05-15T23:02:57.995Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:02:58.031Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:04:22.627Z | GET:/
+date: 2026-05-15T23:04:22.628Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:04:22.650Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+date: 2026-05-15T23:05:19.989Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:05:19.989Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:05:20.009Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:10:34.385Z | GET:/
+date: 2026-05-15T23:10:34.385Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:10:34.422Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:13:00.273Z | GET:/
+date: 2026-05-15T23:13:00.273Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:13:00.292Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:13:46.568Z | GET:/
+date: 2026-05-15T23:13:46.569Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:13:46.586Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:17:03.273Z | GET:/
+date: 2026-05-15T23:17:03.273Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:17:03.305Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:18:53.706Z | GET:/
+date: 2026-05-15T23:18:53.706Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:18:53.828Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:23:43.826Z | GET:/
+date: 2026-05-15T23:23:43.829Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:23:43.856Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:23:49.945Z | GET:/
+date: 2026-05-15T23:23:49.946Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:23:49.973Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:24:00.447Z | HEAD:/ln
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:24:16.929Z | GET:/
+date: 2026-05-15T23:24:16.929Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:24:16.950Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:24:25.700Z | HEAD:/cvbnm
+date: 2026-05-15T23:24:47.827Z
+      host: localhost:28000
+      ip: ::1
+      request: GET
+      response: sendFile => index.js
+      site: Pomodoro
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:24:47.827Z | GET:/
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:24:47.848Z | GET:/.well-known/appspecific/com.chrome.devtools.json
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:24:54.218Z | HEAD:/vbnm,
+REQUEST FROM: localhost:28000 | date: 2026-05-15T23:25:03.193Z | HEAD:/figure.custom%20%3E%20div.container%20audio
