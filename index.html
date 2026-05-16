@@ -225,11 +225,6 @@
 
 	<script type="text/javascript">
 		Number.prototype._clamp = clamp;
-		/**
-		 * Clamp a numberto a value or within a range
-		 * @param { number } val Max if 1 arg, min if 2
-		 * @param { number } max Max if 2 args present
-		 */
 		function clamp(val, max) {
 			switch (arguments.length) {
 				case 0: {console.warn("@_clamp() Error. At least 1 argument must be passed");
@@ -237,16 +232,6 @@
 				case 1: return this > val ? val : this;
 				case 2: 
 				default: return this < val ? val : this > max ? max : this;
-			}
-		}
-		Number.prototype._wrap = wrap;
-		function wrap(val, max) {
-			switch (arguments.length) {
-				case 0: {console.warn("@wrap() Error. At least 1 argument must be passed");
-						return this};
-				case 1: return this > val ? this - val : this;
-				case 2: 
-				default: return this < val ? max - (val - this) : this > max ? this - val : this;
 			}
 		}
 	</script>
@@ -447,22 +432,26 @@
 			node: undefined,
 			show: function() {this.container.classList.remove('hide')},
 			hide: function() {if (this.audio.src != '') this.container.classList.add('hide')},
-			set: function() {
-				fetch(this.input.value, {method:"HEAD"})
-				.then(res => {
-					if (!res.status == 200) throw new Error("Custom URL Invalid");
-					customAudio.radio.dataset.url = customAudio.input.value;
-					customAudio.audio.src = customAudio.input.value;
-					customAudio.audio.classList.remove('hide');
-					customAudio.error.textContent = '';
-					})
-				.catch(err => {console.warn(err); customAudio.error.textContent = err.message})
+			set: async function() {
+				try {
+					const res = await fetch('http://localhost/validateURL?URL='+this.input.value)
+					if (res.status !== 200) throw new Error("Invalid Url");
+					console.log("Set values. . .");
+					this.radio.dataset.url = this.input.value;
+					this.audio.src = this.input.value;
+					this.audio.classList.remove('hide');
+				}
+				catch (err) {console.warn(err.message); customAudio.error.textContent = err.message}
 			}
 		}
+
 		customAudio.radio.addEventListener('change', (e)=> {
 			e.target.checked ? customAudio.show() : customAudio.hide();
+		});
+		customAudio.input.addEventListener('keydown', (e)=> {
+			if (e.key === 'Enter') customAudio.set()
 		})
-
+		
 		titleTicker.addEventListener('change', (e)=> !e.checked && (document.title = "Pomodoro"));
 
 		const fullscreen = document.getElementById('fullscreen');

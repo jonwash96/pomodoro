@@ -6,13 +6,8 @@
 ![screenshot2](/pomo-screenshot2.png)
 
 ## Features
-- Show timer in tab title
+- Show timer in browser tab title
 - Auto-switch to next timer
-- Auto-start next time (optional)
-- Browser notifications (Built-in server is not secure, thus mobile notifications are not allowed.)
+- Browser notifications (Built-in server is unsigned, thus mobile notifications are not allowed.)
 - Choose from several Notification sounds
-- use a custom sound, or silent
-
-## Issues
-- Built-in server auto-set-port is finicky (currently disabled)
-- Custom Audio URL validation CORS error exception not handled
+- Add Custom Notification Sounds by URL
