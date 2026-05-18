@@ -35,7 +35,12 @@
 		
 		.error { color:rgb(255, 45, 45); }
 
-		body { margin: 0 auto; }
+		body { 
+			margin: 0 auto; 
+			overflow-y: scroll; 
+			position: static;
+		}
+
 		h1 { font-family: sans-serif; text-align: center; }
 
 		button {
@@ -209,6 +214,30 @@
 			<input type="number" id="sec-one" class="num-set" value="0" min="0" max="9" multiplier="1000"/>
 		</section>
 
+		<section id="quick-settings">
+			<input id="title-ticker" type="checkbox" title="Title Ticker"/>
+			<label for="title-ticker">Show time in tab title</label>
+			<br>
+			<input id="play-sound" type="checkbox" checked/>
+			<label for="play-sound">Play Sound</label>
+
+			<div class="use-system-notification">
+				<input id="use-system-notification" type="checkbox"/>
+				<label for="use-system-notification">Use System Notification</label>
+				<input type="button" class="material-symbols-outlined info" popovertarget="help-notification-device-compat" value="info">
+				<div class="help" id="help-notification-device-compat" popover>(May not work on some devices)</div>
+				<div class="help" id="help-reset-permission" popover>
+					<h4>How To Reset Browser Notification Permission</h4>
+					<p><b>Google Chrome:</b> Click the Lock/Info icon to the left of the URL in the address bar and toggle the Notifications switch, or click Reset permission.</p>
+					<p><b>Firefox:</b> Go to Settings > Privacy & Security > Permissions, then click the Settings button next to "Notifications".</p>
+					<p><b>Safari:</b> Go to Settings > Websites > Notifications and remove the specific site from the list.</p>
+					<a target="_blank" href="https://ithelp.viu.ca/TDClient/169/ITPortal/KB/Article/8067/How-do-I-disable-browser-notifications">
+						<small>More Info <span class="material-symbols-outlined open-in-new">open_in_new</span></small>
+					</a>
+				</div>
+			</div>
+		</section>
+
 		<section id="settings" class="hide">
 			<div id="sounds">
 				<h3>Alarm Sounds</h3>
@@ -277,30 +306,6 @@
 			</div>
 
 			<div id="more-settings">
-			</div>
-		</section>
-
-		<section id="quick-settings">
-			<input id="title-ticker" type="checkbox" title="Title Ticker"/>
-			<label for="title-ticker">Show time in tab title</label>
-			<br>
-			<input id="play-sound" type="checkbox" checked/>
-			<label for="play-sound">Play Sound</label>
-
-			<div class="use-system-notification">
-				<input id="use-system-notification" type="checkbox"/>
-				<label for="use-system-notification">Use System Notification</label>
-				<input type="button" class="material-symbols-outlined info" popovertarget="help-notification-device-compat" value="info">
-				<div class="help" id="help-notification-device-compat" popover>(May not work on some devices)</div>
-				<div class="help" id="help-reset-permission" popover>
-					<h4>How To Reset Browser Notification Permission</h4>
-					<p><b>Google Chrome:</b> Click the Lock/Info icon to the left of the URL in the address bar and toggle the Notifications switch, or click Reset permission.</p>
-					<p><b>Firefox:</b> Go to Settings > Privacy & Security > Permissions, then click the Settings button next to "Notifications".</p>
-					<p><b>Safari:</b> Go to Settings > Websites > Notifications and remove the specific site from the list.</p>
-					<a target="_blank" href="https://ithelp.viu.ca/TDClient/169/ITPortal/KB/Article/8067/How-do-I-disable-browser-notifications">
-						<small>More Info <span class="material-symbols-outlined open-in-new">open_in_new</span></small>
-					</a>
-				</div>
 			</div>
 		</section>
 
