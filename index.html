@@ -551,7 +551,7 @@
 			},
 			notify: function(options) {
 				if (settings.useSystemNotification.target.checked && Notification.permission === 'granted') {
-					const systemNotification = this.systemNotify({renotify:true, ...options})
+					const systemNotification = this.systemNotify({renotify:true, tag: 'Pomodoro', ...options})
 					systemNotification.addEventListener('click', ()=> {
 						settings.sounds.selected.pause();
 						systemNotification.close(); 
