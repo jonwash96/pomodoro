@@ -8,6 +8,9 @@
 ## Features
 - Show timer in browser tab title
 - Auto-switch to next timer
-- Browser notifications
+- Device notifications
 - Choose from several Notification sounds
 - Add Custom Notification Sounds by URL
+
+## Issues
+- No background service for mobile devices.

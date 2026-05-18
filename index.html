@@ -35,7 +35,7 @@
 		
 		.error { color:rgb(255, 45, 45); }
 
-		body { 
+		body {
 			margin: 0 auto; 
 			overflow-y: scroll; 
 			position: static;
@@ -239,6 +239,11 @@
 		</section>
 
 		<section id="settings" class="hide">
+			<div id="more-settings">
+				<h3>General</h3>
+				<button onclick="notification.test()" class="type3">Test Notification</button>
+			</div>
+
 			<div id="sounds">
 				<h3>Alarm Sounds</h3>
 				<figure class="custom">
@@ -303,9 +308,6 @@
 					</figcaption>
 					<audio class="air-horn" controls src="https://soundbible.com/mp3/Airhorn-SoundBible.com-975027544.mp3"></audio>
 				</figure>
-			</div>
-
-			<div id="more-settings">
 			</div>
 		</section>
 
@@ -430,16 +432,27 @@
 			select: function(mode) {
 				if (timer.timer.target) return;
 				this.prev = this.selected;
-				for (m in this.children) {this.children[m].classList.remove('active')};
+				for (m in this.children) { this.children[m].classList.remove('active') };
 				this.children[mode].classList.add('active'); 
 				this.selected = mode;
-				if (mode === 'config') return settings.show()
-				else settings.hide();
-				!timer.timer.target && timer.set(mode);
+				if (mode === 'config') settings.show();
+				else {
+					settings.hide();
+					timer.set(mode);
+					this.setNext();
+				}
+				return this.children[mode]
 			},
 			cycle: function() {this.selected === 'focus' 
-				? (++this.breakCount > 2 ? this.select('long') : this.select('short'), this.next = 'focus')
-				: (this.select('focus'), this.next = this.breakCount === 2 ? 'long' : 'short');
+				? ++this.breakCount > 2 ? this.select('long') : this.select('short')
+				: this.select('focus');
+				this.setNext();
+				return this.selected
+			},
+			setNext: function() {this.next = this.selected === 'focus' 
+				? this.breakCount >= 2 ? 'long' : 'short'
+				: 'focus';
+				return this.next
 			},
 			reset: function() {
 				this.breakCount = 0;
@@ -493,9 +506,9 @@
 				this.updateNums()
 			},
 			alert: function() {
-				setTimeout(()=> {this.reset(); mode.cycle(); this.nums.forEach(el => el.readOnly = false)}, 1000);
-				clearInterval(this.ticker.target);
+				this.ticker.clear();
 				notification.notify({body: mode.next === 'focus' ? "Time to focus." : "Time for a break."})
+				setTimeout(()=> {this.reset(); mode.cycle()}, 1000);
 			},
 			start: function() {
 				mode.selected === 'config' && settings.hide(true);
@@ -521,8 +534,9 @@
 			reset: function() {
 				buttons.mode.set('Start')
 				buttons.mode.prev = 'start';
-				this.timer.clear()
-				this.ticker.clear()
+				this.timer.clear();
+				this.ticker.clear();
+				this.nums.forEach(el => el.readOnly = false);
 				this.set('focus');
 				document.title = "Pomodoro";
 				settings.hide();
@@ -537,7 +551,12 @@
 			},
 			notify: function(options) {
 				if (settings.useSystemNotification.target.checked && Notification.permission === 'granted') {
-					const systemNotification = this.systemNotify(options)
+					const systemNotification = this.systemNotify({
+						silent: !settings.playSound, 
+						tag:"Pomodoro", 
+						renotify:true,
+						...options, 
+					})
 					systemNotification.addEventListener('click', ()=> {
 						settings.sounds.selected.pause();
 						systemNotification.close(); 
@@ -550,6 +569,9 @@
 				const hasURL = settings.sounds.selected.src
 				if (hasURL && settings.sounds.playSound.checked) settings.sounds.selected.play();
 			},
+			test: function(e) {
+				this.notify({title: "Test Notification", body: "If you're reading this, that means the visible portion of the notifcation is working!"})
+			}
 		}
 		var customAudio = {
 			target: document.querySelector('figure.custom'),
