@@ -554,6 +554,7 @@
 					let systemNotification = this.systemNotify({renotify:true, tag: 'Pomodoro', ...options})
 					systemNotification.addEventListener('click', ()=> {
 						settings.sounds.selected.pause();
+						settings.sounds.currentTime = 0;
 						systemNotification.close(); 
 						systemNotification = undefined
 					})
