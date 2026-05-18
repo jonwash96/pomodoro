@@ -8,6 +8,6 @@
 ## Features
 - Show timer in browser tab title
 - Auto-switch to next timer
-- Browser notifications (Built-in server is unsigned, thus mobile notifications are not allowed.)
+- Browser notifications
 - Choose from several Notification sounds
 - Add Custom Notification Sounds by URL

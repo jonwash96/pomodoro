@@ -13,4 +13,4 @@ app.get("/validateURL", (req,res) => {
     .catch(err => (console.error(err), res.status(406).json({message: err.message})))
 })
 
-app.listen(80, ()=> console.log("Server Running"));
+app.listen(80, ()=> console.log("Server Running @ port 80"));

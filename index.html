@@ -4,6 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pomodoro</title>
+
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&icon_names=arrows_input,arrows_output,open_in_new" /> -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrows_input,arrows_output,info,open_in_new" />
+	<style id="google-icons">
+		.material-symbols-outlined { 
+			font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+			font-size: inherit;
+		}
+		</style>
+
 	<style>
 		:root { 
 			color-scheme: light dark; 
@@ -11,7 +21,10 @@
 			--bgf1: light-dark(#777, #444);
 			--bgf2: light-dark(#666, #555);
 			--bgf2: light-dark(#688, #777);
+			--bgb : light-dark(#eee, #1a1a1a);
 			--bgb1: light-dark(#eef, #001);
+			--green: #0a3;
+			--lgreen: #5f8;
 		}
 		.show { display:block !important; }
 		.show-i { display:inline !important; }
@@ -25,11 +38,30 @@
 		body { margin: 0 auto; }
 		h1 { font-family: sans-serif; text-align: center; }
 
+		button {
+			width: 45%;
+			padding: 12px;
+			border: 1px solid grey;
+			border-radius: 12px;
+			background-color: var(--bgf2);
+			box-shadow: 3px 3px 0 var(--bgf1);
+			&:active { box-shadow: none; }
+			&:hover { cursor: pointer; background-color: var(--bgf3); }
+		}
+
 		#fullscreen-wrapper { 
 			float:right; 
 			& #fullscreen { display: none; }
-			& label::after { content:"☐"; }
-			& input:checked + label::after { content:"■" }
+			& label {
+				font-size: 20pt;
+				&:hover { cursor:pointer; }
+				&> span.out { display:inline; }
+				&> span.in { display:none; }
+			}
+			& input:checked + label { 
+				&> span.out { display:none; }
+				&> span.in { display:inline; }
+			}
 		}
 
 		main {
@@ -43,6 +75,16 @@
 			padding: 2em;
 
 			&> section { width: 100%; }
+		}
+
+		dialog {
+			width: 360px;
+			border: 1px solid grey;
+			border-radius: 6px;
+			box-shadow: 3px 3px 8px #0008;
+			text-align: center;
+			& button { background-color: var(--green);}
+			& button:hover { background-color: var(--lgreen);}
 		}
 
 		section#modes {
@@ -85,21 +127,41 @@
 			&>span { font-size: 52pt; }
 		}
 
+		section#quick-settings {
+			margin: 1em auto;
+
+			& input[type=button].info {
+				padding: 0;
+				margin: 0;
+				background-color: transparent;
+				border: none;
+			}
+
+
+			& div.help {
+				position: absolute;
+				margin: 0;
+				background-color: light-dark(rgb(207, 107, 15), rgb(185, 96, 13));
+				font-size: 10pt;
+				padding: 6px;
+				border: .5px solid grey;
+				border-radius: 6pt;
+				box-shadow: 2px 2px 8px #0006;
+
+				&#help-reset-permission {
+					background-color: var(--bgb);
+					width: calc((40 * 10pt) + (6px * 2));
+				}
+				
+			}
+		}
+
 		section#controls {
 			display: flex;
 			justify-content: center;
 			gap: 2em;
 
 			&> button {
-				width: 45%;
-				padding: 12px;
-				border: 1px solid grey;
-				border-radius: 12px;
-				background-color: var(--bgf2);
-				box-shadow: 6px 6px 0 var(--bgf1);
-
-				&:active { box-shadow: none; }
-				&:hover { cursor: pointer; background-color: var(--bgf3); }
 				&[mode=Start],
 				&[mode=Resume] { 
 					background-color: #0a3; 
@@ -118,9 +180,18 @@
 	<h1>Pomodoro</h1>
 
 	<main>
+		<dialog>
+			<h1>Time's Up!</h1>
+			<p></p>
+			<button onclick="notification.dialog.dismiss()">OK</button>
+		</dialog>
+
 		<div id="fullscreen-wrapper" title="Toggle Fullscreen">
 			<input id="fullscreen" type="checkbox"/>
-			<label for="fullscreen"/>
+			<label for="fullscreen">
+				<span class="material-symbols-outlined out">arrows_output</span>
+				<span class="material-symbols-outlined in">arrows_input</span>
+			</label>
 		</div>
 
 		<section id="modes">
@@ -141,19 +212,13 @@
 		<section id="settings" class="hide">
 			<div id="sounds">
 				<h3>Alarm Sounds</h3>
-				<figure class="silent">
-					<figcaption>
-						<input id="silent" type="radio" name="sounds" data-url="null" checked/>
-						<label for="silent">Silent</label>
-					</figcaption>
-				</figure>
 				<figure class="custom">
 					<figcaption>
-						<input id="custom" type="radio" name="sounds" data-url="null" checked/>
+						<input id="custom" type="radio" name="sounds" data-url="null"/>
 						<label for="custom">Custom</label>
 					</figcaption>
 					<div class="container hide">
-						<audio controls class="hide"></audio><br>
+						<audio class="custom" controls class="hide"></audio><br>
 						<label for="custom-url">URL: </label>
 						<input id="custom-url" type="text"/>
 						<button id="add-custom" onclick="customAudio.set()">Add</button>
@@ -165,57 +230,79 @@
 						<input id="alarm-clock-1" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Alarm%20Clock-SoundBible.com-437257341.mp3"/>
 						<label for="alarm-clock-1">Alarm Clock 1</label>
 					</figcaption>
-					<audio controls src="https://soundbible.com/mp3/Alarm%20Clock-SoundBible.com-437257341.mp3"></audio>
+					<audio class="alarm-clock-1" controls src="https://soundbible.com/mp3/Alarm%20Clock-SoundBible.com-437257341.mp3"></audio>
 				</figure>
 				<figure class="pager">
 					<figcaption>
 						<input id="pager" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Pager%20Beeps-SoundBible.com-260751720.mp3"/>
 						<label for="pager">Pager</label>
 					</figcaption>
-					<audio controls src="https://soundbible.com/mp3/Pager%20Beeps-SoundBible.com-260751720.mp3"></audio>
+					<audio class="pager" controls src="https://soundbible.com/mp3/Pager%20Beeps-SoundBible.com-260751720.mp3"></audio>
 				</figure>
 				<figure class="cuckoo">
 					<figcaption>
 						<input id="cuckoo" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Cuckoo%20Clock-SoundBible.com-1776874523.mp3"/>
 						<label for="alarm-clock-1">Cuckoo</label>
 					</figcaption>
-					<audio controls src="https://soundbible.com/mp3/Cuckoo%20Clock-SoundBible.com-1776874523.mp3"></audio>
+					<audio class="cuckoo" controls src="https://soundbible.com/mp3/Cuckoo%20Clock-SoundBible.com-1776874523.mp3"></audio>
 				</figure>
 				<figure class="4-chime">
 					<figcaption>
 						<input id="4-chime" type="radio" name="sounds" data-url="https://soundbible.com/mp3/clock-chimes-daniel_simon.mp3"/>
 						<label for="4-chime">Chime 4X</label>
 					</figcaption>
-					<audio controls src="https://soundbible.com/mp3/clock-chimes-daniel_simon.mp3"></audio>
+					<audio class="4-chime" controls src="https://soundbible.com/mp3/clock-chimes-daniel_simon.mp3"></audio>
 				</figure>
 				<figure class="zen-bell">
 					<figcaption>
 						<input id="zen-bell" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Temple%20Bell-SoundBible.com-756181215.mp3"/>
 						<label for="zen-bell">Zen Bell</label>
 					</figcaption>
-					<audio controls src="https://soundbible.com/mp3/Temple%20Bell-SoundBible.com-756181215.mp3"></audio>
+					<audio class="zen-bell" controls src="https://soundbible.com/mp3/Temple%20Bell-SoundBible.com-756181215.mp3"></audio>
 				</figure>
 				<figure class="airplane-ding">
 					<figcaption>
 						<input id="airplane-ding" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Air%20Plane%20Ding-SoundBible.com-496729130.mp3"/>
 						<label for="airplane-ding">Ariplane Ding</label>
 					</figcaption>
-					<audio controls src="https://soundbible.com/mp3/Air%20Plane%20Ding-SoundBible.com-496729130.mp3"></audio>
+					<audio class="airplane-ding" controls src="https://soundbible.com/mp3/Air%20Plane%20Ding-SoundBible.com-496729130.mp3"></audio>
 				</figure>
 				<figure class="air-horn">
 					<figcaption>
 						<input id="air-horn" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Airhorn-SoundBible.com-975027544.mp3"/>
 						<label for="air-horn">Air Horn</label>
 					</figcaption>
-					<audio controls src="https://soundbible.com/mp3/Airhorn-SoundBible.com-975027544.mp3"></audio>
+					<audio class="air-horn" controls src="https://soundbible.com/mp3/Airhorn-SoundBible.com-975027544.mp3"></audio>
 				</figure>
+			</div>
+
+			<div id="more-settings">
 			</div>
 		</section>
 
-		<p id="title-ticker-wrapper" title="Title Ticker">
-			<input id="title-ticker" type="checkbox"/>
+		<section id="quick-settings">
+			<input id="title-ticker" type="checkbox" title="Title Ticker"/>
 			<label for="title-ticker">Show time in tab title</label>
-		</p>
+			<br>
+			<input id="play-sound" type="checkbox" checked/>
+			<label for="play-sound">Play Sound</label>
+
+			<div class="use-system-notification">
+				<input id="use-system-notification" type="checkbox"/>
+				<label for="use-system-notification">Use System Notification</label>
+				<input type="button" class="material-symbols-outlined info" popovertarget="help-notification-device-compat" value="info">
+				<div class="help" id="help-notification-device-compat" popover>(May not work on some devices)</div>
+				<div class="help" id="help-reset-permission" popover>
+					<h4>How To Reset Browser Notification Permission</h4>
+					<p><b>Google Chrome:</b> Click the Lock/Info icon to the left of the URL in the address bar and toggle the Notifications switch, or click Reset permission.</p>
+					<p><b>Firefox:</b> Go to Settings > Privacy & Security > Permissions, then click the Settings button next to "Notifications".</p>
+					<p><b>Safari:</b> Go to Settings > Websites > Notifications and remove the specific site from the list.</p>
+					<a target="_blank" href="https://ithelp.viu.ca/TDClient/169/ITPortal/KB/Article/8067/How-do-I-disable-browser-notifications">
+						<small>More Info <span class="material-symbols-outlined open-in-new">open_in_new</span></small>
+					</a>
+				</div>
+			</div>
+		</section>
 
 		<section id="controls">
 			<button id="start-pause" mode="Start">Start</button>
@@ -223,7 +310,7 @@
 		</section>
 	</main>
 
-	<script type="text/javascript">
+	<script id="GLOBAL_METHODS" type="text/javascript">
 		Number.prototype._clamp = clamp;
 		function clamp(val, max) {
 			switch (arguments.length) {
@@ -234,9 +321,26 @@
 				default: return this < val ? val : this > max ? max : this;
 			}
 		}
+
+		function calculateWHOffsets({fontSize, lines=1, textLen, width, height}) {
+			this.pts_px = 0.75;
+			this.h_w_ratio = 0.5;
+			this.fontSize = fontSize * lines * this.pts_px;
+			this.padding = 6;
+			this.width = width || (textLen * this.fontSize  * this.h_w_ratio) + (this.padding * 2);
+			this.height = height || this.fontSize + (this.padding * 2);
+			this.decenders = this.height * 0.222;
+		}
 	</script>
-	<script type="text/javascript">
-		const titleTicker = document.getElementById('title-ticker')
+
+	<script id="CONSTANTS" type="text/javascript">
+		const titleTicker = document.getElementById('title-ticker');
+		const fullscreen = document.getElementById('fullscreen');
+		const body = document.querySelector('body');
+		const removeGlobalListener = (event='click', func) => document.removeEventListener(event, func);
+	</script>
+
+	<script id="COMPONENTS" type="text/javascript">
 		var settings = {
 			panel: document.getElementById('settings'),
 			button: document.getElementById('config'),
@@ -244,8 +348,57 @@
 				target: document.getElementById('sounds'),
 				children: Array.from(document.getElementById('sounds').children),
 				inputs: Array.from(document.querySelectorAll('section#settings > div#sounds input')),
-				selected: document.getElementById('zen-bell'),
-				select: function(node) {this.selected = node}
+				selected: document.querySelector('figure.zen-bell audio'),
+				select: function(node) {this.selected = document.querySelector(`figure.${node.id} audio`)},
+				playSound: document.getElementById('play-sound'),
+			},
+			useSystemNotification: {
+				target: document.getElementById('use-system-notification'),
+				info: {
+					target:document.querySelector('div.use-system-notification input[type=button].info'),
+					clicked: function(e) {
+						const self = this.info.target;
+						this.help.innerHTML = "(May not work on some devices)"
+						const calc = new calculateWHOffsets({fontSize:10, textLen:this.help.main.textContent.length})
+						this.help.main.style.position = 'absolute';
+						this.help.main.style.left = e.clientX - calc.width +'px';
+						this.help.main.style.top = e.clientY - ((calc.height - calc.decenders) *3) +'px';
+					}
+				},
+				help: {
+					main: document.getElementById('help-notification-device-compat'),
+					resetPermission: {
+						target: document.getElementById('help-reset-permission'),
+						show: function(e) {
+							const calc = new calculateWHOffsets({fontSize:10, textLen:40});
+							this.main.style.position = 'absolute';
+							this.main.style.left = e.clientX - calc.width +'px';
+							this.main.style.top = (e.clientY - ((calc.height - calc.decenders) *7))._clamp(innerHeight) +'px';
+						}
+					},
+				},
+				flash: function(body) {
+					this.help.main.innerHTML = body;
+					this.help.main.style.position = 'absolute';
+					const calc = new calculateWHOffsets({fontSize:10, textLen:this.help.main.textContent.length})
+					this.help.main.style.left = this.info.target.getBoundingClientRect().left - calc.width +'px';
+					this.help.main.style.top = (this.info.target.getBoundingClientRect().top - ((calc.height - calc.decenders) *7))._clamp(innerHeight) +'px';
+					this.help.main.showPopover();
+				},
+				onChange: function(e) {
+					if (Notification.permission === 'denied') {
+						e.preventDefault();
+						if (e.target.checked) this.flash("Browser notification permission must be granted <input type='button' class='material-symbols-outlined info' popovertarget='help-reset-permission' value='info'>")
+						this.help.main.children[0].addEventListener('click', this.help.resetPermission.show)
+						this.target.checked = false;
+					}
+					else if (e.target.checked && Notification.permission !== 'granted') {
+						Notification.requestPermission();
+						this.info.target.classList.add('illuminate');
+						setTimeout(()=> this.info.target.classList.remove('illuminate'), 3000);
+					}
+					else this.target.readOnly = false;
+				}
 			},
 			show: function() {
 				settings.panel.classList.remove('hide');
@@ -266,6 +419,7 @@
 				config: settings.button,
 			},
 			prev: undefined,
+			next: 'short',
 			selected: 'focus',
 			breakCount: 0,
 			select: function(mode) {
@@ -279,8 +433,8 @@
 				!timer.timer.target && timer.set(mode);
 			},
 			cycle: function() {this.selected === 'focus' 
-				? ++this.breakCount > 2 ? this.select('long') : this.select('short')
-				: this.select('focus'); 
+				? (++this.breakCount > 2 ? this.select('long') : this.select('short'), this.next = 'focus')
+				: (this.select('focus'), this.next = this.breakCount === 2 ? 'long' : 'short');
 			},
 			reset: function() {
 				this.breakCount = 0;
@@ -370,31 +524,78 @@
 			}
 		}
 		var notification = {
-			target: undefined,
-			audio: undefined,
+			systemNotify: (options)=> new Notification(options?.title || "Time's up", {vibrate: [100, 50, 100, 50, 200], ...options}),
+			dialog: {
+				target: document.querySelector('dialog'),
+				show: function(body='') {this.target.children[1].textContent = body; this.target.show()},
+				dismiss: function() {settings.sounds.selected.pause(); this.target.close()}
+			},
 			notify: function(options) {
-				if (Notification.permission !== 'granted') return alert(`Time's Up! ${options?.body}`)
-				this.target = new Notification(options?.title || "Time's up", {
-					vibrate: [100, 50, 100, 50, 200],
-					...options
-				});
-				this.target.addEventListener('click', ()=> {
-					this.audio?.pause();
-					this.target.close(); 
-					this.target = undefined
-				})
-				const url = settings.sounds.selected.dataset.url
-				this.audio = url && new Audio(url)
-				this.audio.play();
+				if (settings.useSystemNotification.target.checked && Notification.permission === 'granted') {
+					const systemNotification = this.systemNotify(options)
+					systemNotification.addEventListener('click', ()=> {
+						settings.sounds.selected.pause();
+						systemNotification.close(); 
+						systemNotification = undefined
+					})
+				} else {
+					settings.sounds.playSound.checked && settings.sounds.selected.play();
+					this.dialog.show(`${options?.body}`) 
+				}
+				const hasURL = settings.sounds.selected.src
+				if (hasURL && settings.sounds.playSound.checked) settings.sounds.selected.play();
 			},
 		}
+		var customAudio = {
+			target: document.querySelector('figure.custom'),
+			radio: document.querySelector('figure.custom input[type=radio]'),
+			container: document.querySelector('figure.custom > div.container'),
+			error: document.querySelector('figure.custom > div.container span.error'),
+			input: document.querySelector('figure.custom > div.container input[type=text]'),
+			audio: document.querySelector('figure.custom > div.container audio'),
+			node: undefined,
+			show: function() {this.container.classList.remove('hide')},
+			hide: function() {if (this.audio.src != '') this.container.classList.add('hide')},
+			set: async function() {
+				try {
+					const res = await fetch('http://localhost/validateURL?URL='+this.input.value)
+					if (res.status !== 200) throw new Error("Invalid Url");
+					this.radio.dataset.url = this.input.value;
+					this.audio.src = this.input.value;
+					this.audio.classList.remove('hide');
+				}
+				catch (err) {console.warn(err.message); customAudio.error.textContent = err.message}
+			}
+		}
+	</script>
 
+	<script id="BINDINGS" type="text/javascript">
 		timer.start = timer.start.bind(timer);
 		timer.pause = timer.pause.bind(timer);
 		timer.resume = timer.resume.bind(timer);
+		mode.select = mode.select.bind(mode);
 		buttons.reset.call = buttons.reset.call.bind(buttons.reset);
+		settings.sounds.select = settings.sounds.select.bind(settings.sounds);
+		settings.useSystemNotification.onChange = settings.useSystemNotification.onChange.bind(settings.useSystemNotification);
+		settings.useSystemNotification.info.clicked = settings.useSystemNotification.info.clicked.bind(settings.useSystemNotification);
+		settings.useSystemNotification.help.resetPermission.show = settings.useSystemNotification.help.resetPermission.show.bind(settings.useSystemNotification.help);
+	</script>
+
+	<script id="INITIALIZE_DEFAULTS" type="text/javascript">
+		document.getElementById(settings.sounds.selected.className).checked = true;
+		if (!window.Notification) document.querySelector('span.use-system-notification').classList.add('hide');
+		if (Notification.permission === 'denied') settings.useSystemNotification.target.readOnly = true;
+	</script>
+
+	<script id="LISTENERS" type="text/javascript">
 		buttons.mode.target.addEventListener('click', timer.start);
 		buttons.reset.target.addEventListener('click', buttons.reset.call);
+		Array.from(mode.target.children).forEach(el => el.addEventListener('click', (e)=> mode.select(e.target.id)));
+		fullscreen.addEventListener('change', (e)=> document.fullscreen ? document.exitFullscreen() : body.requestFullscreen());
+		settings.sounds.inputs.forEach(input => input.addEventListener('change', (e)=> settings.sounds.select(e.target)));
+		settings.useSystemNotification.target.addEventListener('change', settings.useSystemNotification.onChange);
+		settings.useSystemNotification.info.target.addEventListener('click', settings.useSystemNotification.info.clicked);
+
 		timer.nums.forEach((input,idx) => {
 			const handleKeyDown = (e) => {
 				if (e.key === 'Enter') {input.blur(); timer.start()}
@@ -414,37 +615,7 @@
 				input.removeEventListener('keydown', handleKeyDown)
 			})
 		});
-
-		mode.select = mode.select.bind(mode);
-		Array.from(mode.target.children).forEach(el => el.addEventListener('click', (e)=> mode.select(e.target.id)));
-
-		settings.sounds.select = settings.sounds.select.bind(settings.sounds);
-		settings.sounds.inputs.forEach(input => input.addEventListener('change', (e)=> settings.sounds.select(e.target)));
-		settings.sounds.selected.checked = true;
-
-		const customAudio = {
-			target: document.querySelector('figure.custom'),
-			radio: document.querySelector('figure.custom input[type=radio]'),
-			container: document.querySelector('figure.custom > div.container'),
-			error: document.querySelector('figure.custom > div.container span.error'),
-			input: document.querySelector('figure.custom > div.container input[type=text]'),
-			audio: document.querySelector('figure.custom > div.container audio'),
-			node: undefined,
-			show: function() {this.container.classList.remove('hide')},
-			hide: function() {if (this.audio.src != '') this.container.classList.add('hide')},
-			set: async function() {
-				try {
-					const res = await fetch('http://localhost/validateURL?URL='+this.input.value)
-					if (res.status !== 200) throw new Error("Invalid Url");
-					console.log("Set values. . .");
-					this.radio.dataset.url = this.input.value;
-					this.audio.src = this.input.value;
-					this.audio.classList.remove('hide');
-				}
-				catch (err) {console.warn(err.message); customAudio.error.textContent = err.message}
-			}
-		}
-
+		
 		customAudio.radio.addEventListener('change', (e)=> {
 			e.target.checked ? customAudio.show() : customAudio.hide();
 		});
@@ -453,12 +624,6 @@
 		})
 		
 		titleTicker.addEventListener('change', (e)=> !e.checked && (document.title = "Pomodoro"));
-
-		const fullscreen = document.getElementById('fullscreen');
-		const body = document.querySelector('body');
-		fullscreen.addEventListener('change', (e)=> document.fullscreen ? document.exitFullscreen() : body.requestFullscreen());
-
-		window['Notification'] && Notification.requestPermission();
 	</script>
 </body>
 </html>
