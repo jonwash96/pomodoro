@@ -17,12 +17,12 @@
 	<style>
 		:root { 
 			color-scheme: light dark; 
-			--bg: light-dark(#888, #333);
-			--bgf1: light-dark(#777, #444);
-			--bgf2: light-dark(#666, #555);
-			--bgf2: light-dark(#688, #777);
-			--bgb : light-dark(#eee, #1a1a1a);
-			--bgb1: light-dark(#eef, #001);
+			--bg: light-dark(#eee, #333);
+			--bgf1: light-dark(#f8f8f8, #444);
+			--bgf2: light-dark(#fff, #555);
+			--bgf3: light-dark(#688, #777);
+			--bgb : light-dark(#ccc, #1a1a1a);
+			--bgb1: light-dark(#e0e6f0, #001);
 			--green: #0a3;
 			--lgreen: #5f8;
 		}
@@ -98,7 +98,7 @@
 
 			&> div {
 				padding: 6px;
-				border: 1px solid grey;
+				border: 1px solid light-dark(var(--bgb), grey);
 				border-bottom: none;
 				border-radius: 6px 6px 0 0;
 
@@ -113,7 +113,7 @@
 
 		section#timer {
 			background-color: var(--bgf1);
-			border: 1px solid grey;
+			border: 1px solid light-dark(var(--bgb), grey);
 			border-radius: 0 6px 6px 6px;
 			padding: 4em auto;
 			display: flex;
@@ -128,6 +128,12 @@
 				text-align: center;
 				font-family: monospace;
 				background-color: var(--bgb1);
+
+				&::-webkit-inner-spin-button {
+					/* -webkit-appearance: none; */
+					margin: 0;
+					font-size: 12pt;
+				}
 			}
 			&>span { font-size: 52pt; }
 		}
