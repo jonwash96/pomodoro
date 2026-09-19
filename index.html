@@ -51,7 +51,12 @@
 			background-color: var(--bgf2);
 			box-shadow: 3px 3px 0 var(--bgf1);
 			&:active { box-shadow: none; }
-			&:hover { cursor: pointer; background-color: var(--bgf3); }
+			&:enabled:hover { cursor: pointer; background-color: var(--bgf3); }
+		}
+
+		button#save-config {
+			float: right;
+			width: max-content;
 		}
 
 		#fullscreen-wrapper { 
@@ -221,6 +226,8 @@
 		</section>
 
 		<section id="quick-settings">
+			<button type="submit" id="save-config" disabled>Save</button>
+
 			<input id="title-ticker" type="checkbox" title="Title Ticker"/>
 			<label for="title-ticker">Show time in tab title</label>
 			<br>
@@ -242,6 +249,8 @@
 					</a>
 				</div>
 			</div>
+
+			<br>
 		</section>
 
 		<section id="settings" class="hide">
@@ -423,6 +432,7 @@
 				timer.target.classList.remove('hide');
 			}
 		}
+		
 		var mode = {
 			target: document.getElementById('modes'),
 			children: {
@@ -441,6 +451,7 @@
 				for (m in this.children) { this.children[m].classList.remove('active') };
 				this.children[mode].classList.add('active'); 
 				this.selected = mode;
+				buttons.save.set(false);
 				if (mode === 'config') settings.show();
 				else {
 					settings.hide();
@@ -465,6 +476,7 @@
 				this.select('focus');
 			}
 		}
+		
 		var buttons = {
 			mode: {
 				target: document.getElementById('start-pause'),
@@ -480,11 +492,52 @@
 				target: document.getElementById('reset'),
 				call: ()=> {timer.reset(); mode.reset()},
 			},
+			save: {
+				target: document.getElementById('save-config'),
+				save() { timer.customTimes.set(mode.selected); this.set("Reset") },
+				reset() { 
+					timer.customTimes.clear(mode.selected); 
+					timer.set(mode.selected);
+					this.set("Save");
+				},
+				set(v) {
+					const custom = timer.customTimes[mode.selected];
+					this.target.disabled = !custom;
+					if (!v) { 
+						this.target.textContent = custom ? "Reset" : "Save";
+					} else { const xed = v === "Save" ? "Reset" : "Saved";
+						this.target.textContent = `Timer ${xed}!`
+						setTimeout(()=> this.target.textContent = v, 1500);
+					}
+				},
+				listen() { this.target.addEventListener('click', (e)=> {
+					console.log(e.target.textContent)
+					if (e.target.textContent === 'Save') this.save();
+					else this.reset();
+				})}
+			}
 		}
+		
 		var timer = {
 			target: document.getElementById('timer'),
 			nums: Array.from(document.querySelectorAll('.num-set')),
 			currentTime: 0,
+			get displayedTime() { return timer.nums.reduce((a,b) => a += Number(b.value) * Number(b.getAttribute('multiplier')), 0); },
+			defaultTimes: {
+				focus: 1500000,
+				short: 300000,	
+				long: 900000,
+			},
+			customTimes: {
+				focus: undefined,
+				short: undefined,
+				long: undefined,
+				set(mode) {
+					const timeMS = timer.nums.reduce((a,b) => a += Number(b.value) * Number(b.getAttribute('multiplier')), 0);
+					this[mode] = timeMS;
+				},
+				clear(mode) { this[mode] = undefined },
+			},
 			timer: {
 				target: undefined,
 				start: function() {this.target = setTimeout(()=> timer.alert(), timer.currentTime);},
@@ -503,10 +556,11 @@
 			},
 			updateNums: function() {this.nums.forEach(el => el.value = Math.floor(this.currentTime / el.getAttribute('multiplier')) % (el.id.includes('ten') ? 6 : 10))},
 			set: function(mode) {
+				const cs = this.customTimes;
 				switch (mode) {
-					case 'focus': this.currentTime = 25 * 1000 * 60; break;
-					case 'long': this.currentTime = 15 * 1000 * 60; break;
-					case 'short': this.currentTime = 5 * 1000 * 60; break;
+					case 'focus': this.currentTime = cs.focus ||  25 * 1000 * 60; break;
+					case 'long': this.currentTime = cs.long ||  15 * 1000 * 60; break;
+					case 'short': this.currentTime = cs.short || 5 * 1000 * 60; break;
 					default: typeof mode === 'number' ? this.currentTime = mode : this.currentTime = 25 * 1000 * 60;
 				}
 				this.updateNums()
@@ -522,6 +576,7 @@
 				this.currentTime = timeMS;
 				this.nums.forEach(el => el.readOnly = true);
 				buttons.mode.set('Pause');
+				buttons.save.disabled = false;
 				this.timer.start();
 				this.ticker.tick();
 			},
@@ -548,6 +603,7 @@
 				settings.hide();
 			}
 		}
+		
 		var notification = {
 			systemNotify: (options)=> new Notification(options?.title || "Time's up", {vibrate: [100, 50, 100, 50, 200], ...options}),
 			dialog: {
@@ -575,6 +631,7 @@
 				this.notify({title: "Test Notification", body: "If you're reading this, that means the visible portion of the notifcation is working!"})
 			}
 		}
+		
 		var customAudio = {
 			target: document.querySelector('figure.custom'),
 			radio: document.querySelector('figure.custom input[type=radio]'),
@@ -614,11 +671,13 @@
 		document.getElementById(settings.sounds.selected.className).checked = true;
 		if (!window.Notification) document.querySelector('span.use-system-notification').classList.add('hide');
 		if (Notification.permission === 'denied') settings.useSystemNotification.target.readOnly = true;
+		timer.currentTime = timer.displayedTime;
 	</script>
 
 	<script id="LISTENERS" type="text/javascript">
 		buttons.mode.target.addEventListener('click', timer.start);
 		buttons.reset.target.addEventListener('click', buttons.reset.call);
+		buttons.save.listen();
 		Array.from(mode.target.children).forEach(el => el.addEventListener('click', (e)=> mode.select(e.target.id)));
 		fullscreen.addEventListener('change', (e)=> document.fullscreen ? document.exitFullscreen() : body.requestFullscreen());
 		settings.sounds.inputs.forEach(input => input.addEventListener('change', (e)=> settings.sounds.select(e.target)));
@@ -639,10 +698,14 @@
 			input.addEventListener('focus', ()=> {
 				input.select();
 				input.addEventListener('keydown', handleKeyDown)
-			})
+			});
 			input.addEventListener('blur', ()=> {
-				input.removeEventListener('keydown', handleKeyDown)
-			})
+				buttons.save.target.disabled = (timer.displayedTime === timer.currentTime);
+				input.removeEventListener('keydown', handleKeyDown);
+			});
+			input.addEventListener('change', ()=> {
+				buttons.save.target.disabled = (timer.displayedTime === timer.currentTime);
+			});
 		});
 		
 		customAudio.radio.addEventListener('change', (e)=> {

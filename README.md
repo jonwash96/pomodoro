@@ -1,5 +1,7 @@
 # Pomodoro Timer
 
+>v1.2
+
 [Use The App ☞](https://jonwash96.github.io/pomodoro)
 
 25 minute focus sessions, followed by two 5 minute short breaks, before a 15 minute long break.
@@ -16,3 +18,8 @@
 
 ## Issues
 - No background service for mobile devices.
+
+## Change Log
+
+### v1.2
+- Added Save button (session only)
