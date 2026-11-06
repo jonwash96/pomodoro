@@ -274,6 +274,13 @@
 						<span class="error"></span>
 					</div>
 				</figure>
+				<figure class="alien-ship-ufo">
+					<figcaption>
+						<input id="alien-ship-ufo" type="radio" name="sounds" data-url="https://soundbible.com/mp3/alien-spaceship_daniel_simion.mp3"/>
+						<label for="alien-ship-ufo">Alien Ship UFO</label>
+					</figcaption>
+					<audio class="alien-ship-ufo" controls src="https://soundbible.com/mp3/alien-spaceship_daniel_simion.mp3"></audio>
+				</figure>
 				<figure class="alarm-clock-1">
 					<figcaption>
 						<input id="alarm-clock-1" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Alarm%20Clock-SoundBible.com-437257341.mp3"/>
@@ -304,10 +311,10 @@
 				</figure>
 				<figure class="zen-bell">
 					<figcaption>
-						<input id="zen-bell" type="radio" name="sounds" data-url="https://soundbible.com/mp3/Temple%20Bell-SoundBible.com-756181215.mp3"/>
+						<input id="zen-bell" type="radio" name="sounds" data-url="/pomodoro/audio/zen-bell.mp3"/>
 						<label for="zen-bell">Zen Bell</label>
 					</figcaption>
-					<audio class="zen-bell" controls src="https://soundbible.com/mp3/Temple%20Bell-SoundBible.com-756181215.mp3"></audio>
+					<audio class="zen-bell" controls src="/pomodoro/audio/zen-bell.mp3" type="audio/mp3"></audio>
 				</figure>
 				<figure class="airplane-ding">
 					<figcaption>
@@ -323,6 +330,13 @@
 					</figcaption>
 					<audio class="air-horn" controls src="https://soundbible.com/mp3/Airhorn-SoundBible.com-975027544.mp3"></audio>
 				</figure>
+			</div>
+
+			<div id="about" style="margin-bottom: 1em; color: grey;">
+				<h3>About</h3>
+				<strong>Pomodoro Timer</strong><br />
+				<span>version 1.2</span><br />
+				<a href="https://github.com/jonwash96/pomodoro" style="color: grey;">View on Github</a>
 			</div>
 		</section>
 
@@ -644,8 +658,6 @@
 			hide: function() {if (this.audio.src != '') this.container.classList.add('hide')},
 			set: async function() {
 				try {
-					const res = await fetch('http://localhost/validateURL?URL='+this.input.value)
-					if (res.status !== 200) throw new Error("Invalid Url");
 					this.radio.dataset.url = this.input.value;
 					this.audio.src = this.input.value;
 					this.audio.classList.remove('hide');
